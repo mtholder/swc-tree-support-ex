@@ -59,7 +59,8 @@ in the output line:
 
 '''
 import json
-filename = 'data/simdata.json'
+import sys
+filename = sys.argv[1]
 inp = open(filename, 'rU')
 matrix_list = json.load(inp)
 
