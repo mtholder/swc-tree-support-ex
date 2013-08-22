@@ -1,0 +1,20 @@
+[
+    [
+        {
+            "name":"human", 
+            "data" :"CGACCAGGTATG"
+        },
+        {
+            "name":"chimp",
+            "data" :"CGACCAGGTACG"
+        },
+        {
+            "name":"gorilla", 
+            "data" :"CCGTCCGGTCTG"
+        },
+        {
+            "name":"orang", 
+            "data" :"CCGCCTGGTCCG"
+        }
+    ]
+]
