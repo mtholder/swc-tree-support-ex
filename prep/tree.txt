@@ -1,0 +1,1 @@
+((human:0.2,chimp:0.2):0.0,(gorilla:0.2,orang:0.2):0.0);
