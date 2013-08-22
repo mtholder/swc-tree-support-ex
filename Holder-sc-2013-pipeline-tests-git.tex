@@ -1,0 +1,120 @@
+\documentclass[xcolor=dvipsnames,compress,12pt]{beamer}
+
+%% General document %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx}
+\usepackage{upgreek}
+\usepackage{bm}
+\usepackage{natbib}
+\usepackage{xspace}
+\usepackage{appendix}
+%\usepackage[T1]{fontenc}
+%\usepackage[scaled]{helvet}
+%\renewcommand*\familydefault{\sfdefault} %% Only if the base font of the document is to be sans serif
+
+\usepackage[LGR,T1]{fontenc} %% LGR encoding is needed for loading the package gfsneohellenic
+%\usepackage[default]{gfsneohellenic}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\definecolor{mycol1}{RGB}{2,0,145}
+\definecolor{mycol2}{RGB}{25,23,191}
+%% Beamer Layout %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\useoutertheme[footline=authorinstitute,subsection=false]{miniframes}
+%\useoutertheme[subsection=false,shadow]{miniframes}
+\useinnertheme{circles}
+
+\useoutertheme{default}
+\renewcommand{\Pr}{\mathbb{P}}
+
+%%%%%%%%%%%%%%%%%%% Xtra footline
+\makeatletter
+% add a macro that saves its argument
+\newcommand{\footlineextra}[1]{\gdef\insertfootlineextra{#1}}
+\newbox\footlineextrabox
+% add a beamer template that sets the saved argument in a box.
+% The * means that the beamer font and color "footline extra" are automatically added. 
+\defbeamertemplate*{footline extra}{default}{
+    \begin{beamercolorbox}[ht=2.25ex,dp=1ex,leftskip=3mm,rightskip=3mm]{footline extra}
+    \insertfootlineextra
+    %\par\vspace{2.5pt}
+    \end{beamercolorbox}
+}
+\addtobeamertemplate{footline}{%
+    % set the box with the extra footline material but make it add no vertical space
+    \setbox\footlineextrabox=\vbox{\usebeamertemplate*{footline extra}}
+    \vskip -\ht\footlineextrabox
+    \vskip -\dp\footlineextrabox
+    \box\footlineextrabox%
+}
+{}
+% patch \begin{frame} to reset the footline extra material
+\let\beamer@original@frame=\frame
+\def\frame{\gdef\insertfootlineextra{}\beamer@original@frame}
+\footlineextra{}
+\makeatother
+\setbeamercolor{footline extra}{fg=structure.fg}% for instance
+%%%%%%%%%%%%%%%%%%%%
+
+
+\usefonttheme{serif}
+\setbeamertemplate{navigation symbols} {}
+%\setbeamerfont{title like}{shape=\textsc}
+%\setbeamerfont{frametitle}{shape=\textsc}
+\setbeamercolor{title}{fg= mycol2}
+\setbeamercolor{subtitle}{fg=black}
+
+\setbeamerfont{frametitle}{size=\LARGE}
+\setbeamercolor{frametitle}{fg= mycol2}
+
+\setbeamercolor*{lower separation line head}{bg= mycol1} 
+\setbeamercolor*{normal text}{fg=black,bg=white} 
+\setbeamercolor*{alerted text}{fg=red} 
+\setbeamercolor*{example text}{fg=black} 
+\setbeamercolor*{structure}{fg=black} 
+ 
+\setbeamercolor*{palette tertiary}{fg=black,bg=black!10} 
+\setbeamercolor*{palette quaternary}{fg=black,bg=black!10} 
+
+\DeclareMathAlphabet{\msfsl}{T1}{cmr}{m}{it}
+\DeclareMathAlphabet{\msyf}{OML}{cmm}{m}{it}
+\newcommand{\alf}{\upalpha}
+\definecolor{dgray}{gray}{0.4}
+\definecolor{tan}{rgb}{0.5,0.5,0.3}
+
+%\renewcommand{\(}{\begin{columns}}
+%\renewcommand{\)}{\end{columns}}
+%\newcommand{\<}[1]{\begin{column}{#1}}
+%\renewcommand{\>}{\end{column}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\title{\LARGE{Software Carpentry \\{\large \texttt{git}, testing, pipelines}}}
+\date{\large Aug 23, 2013}
+\author[Holder]{Mark T. Holder}
+\institute[pt2012]{\inst{}Department of Ecology and Evolutionary Biology, University of Kansas}
+\newcommand{\myfootnote}[1]{\let\thefootnote\relax\footnotetext{#1}}
+
+\usepackage{pgf}
+\include{positioning}
+\usepackage{tikz} 
+\usetikzlibrary{trees,arrows,positioning,automata}
+
+\tikzset{suitestate/.style={circle,rounded corners,draw=blue!90,fill=blue!05,ultra thick}}
+\tikzset{state/.style={rectangle,rounded corners,draw=blue!90,fill=blue!05,ultra thick}}
+\tikzset{ostate/.style={rectangle,rounded corners,draw=blue!90,fill=blue!05,ultra thick}}
+\tikzset{empty/.style={rectangle,rounded corners,draw=white,fill=white,thick}}
+%\usepackage{paralist}
+\usepackage{cancel}
+
+\begin{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\maketitle
+%\begin{frame}
+%\titlepage
+%\end{frame}
+
+
+
+\end{document}
+
