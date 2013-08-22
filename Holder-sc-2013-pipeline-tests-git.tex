@@ -114,7 +114,91 @@
 %\titlepage
 %\end{frame}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Motivating example}
+\begin{tabular}{lcccccccccccc}
+human\hskip 2mm  & C & G  & A & C & C & {A} & G & G & T & A & T &G\\
+chimp\hskip 2mm  & C & G  & A & C & C & {A} & G & G & T & A & C &G\\
+gorilla\hskip 2mm& C & C  & G & T & C & {C} & G & G & T & C & T &G\\
+orang\hskip 2mm  & C & C  & G & C & C & {T} & G & G & T & C & C & G\\
+\end{tabular}
 
+\end{frame}
+
+\begin{frame}{Motivating example}
+\begin{tabular}{lcccccccccccc}
+human\hskip 2mm  & C & {\color{red}G}  & {\color{red}A} & C & C & {A} & G & G & T & {\color{red}A} & {\color{blue}T} &G\\
+chimp\hskip 2mm  & C & {\color{red}G}  & {\color{red}A} & C & C & {A} & G & G & T & {\color{red}A} & {\color{blue}C} &G\\
+gorilla\hskip 2mm& C & {\color{red}C}  & {\color{red}G} & T & C & {C} & G & G & T & {\color{red}C} & {\color{blue}T} &G\\
+orang\hskip 2mm  & C & {\color{red}C}  & {\color{red}G} & C & C & {T} & G & G & T & {\color{red}C} & {\color{blue}C} & G\\
+\end{tabular}
+\vskip 1em
+{\color{red} human-with-chimp: 3}\\
+{\color{blue} human-with-gorilla: 1}\\
+{\color{green} human-with-orang: 0}\\
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Motivating example}
+\begin{tabular}{lcccccccccccc}
+human\hskip 2mm  & C & {\color{red}G}  & {\color{red}A} & C & C & {A} & G & G & T & {\color{red}A} & {\color{blue}T} &G\\
+chimp\hskip 2mm  & C & {\color{red}G}  & {\color{red}A} & C & C & {A} & G & G & T & {\color{red}A} & {\color{blue}C} &G\\
+gorilla\hskip 2mm& C & {\color{red}C}  & {\color{red}G} & T & C & {C} & G & G & T & {\color{red}C} & {\color{blue}T} &G\\
+orang\hskip 2mm  & C & {\color{red}C}  & {\color{red}G} & C & C & {T} & G & G & T & {\color{red}C} & {\color{blue}C} & G\\
+\end{tabular}
+\vskip 1em
+{\color{red} human-with-chimp: 3}\\
+{\color{blue} human-with-gorilla: 1}\\
+{\color{green} human-with-orang: 0}\\
+\vskip 1em
+``best'' = largest count = 3\\
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Motivating example}
+\begin{tabular}{lcccccccccccc}
+human\hskip 2mm  & C & {\color{red}G}  & {\color{red}A} & C & C & {A} & G & G & T & {\color{red}A} & {\color{blue}T} &G\\
+chimp\hskip 2mm  & C & {\color{red}G}  & {\color{red}A} & C & C & {A} & G & G & T & {\color{red}A} & {\color{blue}C} &G\\
+gorilla\hskip 2mm& C & {\color{red}C}  & {\color{red}G} & T & C & {C} & G & G & T & {\color{red}C} & {\color{blue}T} &G\\
+orang\hskip 2mm  & C & {\color{red}C}  & {\color{red}G} & C & C & {T} & G & G & T & {\color{red}C} & {\color{blue}C} & G\\
+\end{tabular}
+\vskip 1em
+{\color{red} human-with-chimp: 3}\\
+{\color{blue} human-with-gorilla: 1}\\
+{\color{green} human-with-orang: 0}\\
+\vskip 1em
+``best'' = largest count = 3\\
+\vskip 1em
+``support'' = best - second best = 3 - 1 = 2
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Motivating example}
+\begin{tabular}{lcccccccccccc}
+human\hskip 2mm  & C & {\color{red}G}  & {\color{red}A} & C & C & {A} & G & G & T & {\color{red}A} & {\color{blue}T} &G\\
+chimp\hskip 2mm  & C & {\color{red}G}  & {\color{red}A} & C & C & {A} & G & G & T & {\color{red}A} & {\color{blue}C} &G\\
+gorilla\hskip 2mm& C & {\color{red}C}  & {\color{red}G} & T & C & {C} & G & G & T & {\color{red}C} & {\color{blue}T} &G\\
+orang\hskip 2mm  & C & {\color{red}C}  & {\color{red}G} & C & C & {T} & G & G & T & {\color{red}C} & {\color{blue}C} & G\\
+\end{tabular}
+\vskip 1em
+{\color{red} human-with-chimp: 3}\\
+{\color{blue} human-with-gorilla: 1}\\
+{\color{green} human-with-orang: 0}\\
+\vskip 1em
+``best'' = largest count = 3\\
+\vskip 1em
+``support'' = best - second best = 3 - 1 = 2
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Motivating example}
+Input: A file with many character matrices, each with 4 species.
+
+\vskip 1em
+
+Operation: Calculate the support for each matrix
+
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{IPython is great, but...}
