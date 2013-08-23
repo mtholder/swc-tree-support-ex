@@ -61,3 +61,16 @@ import sys
 
 filename = sys.argv[1]
 inp = open(filename, 'rU')
+
+list = []
+
+for line in inp:
+	list.append(int(line.replace('\n','')))
+
+list.sort()
+
+cut_off = int(len(list)*.95)-1
+
+print list[cut_off]+1
+
+
