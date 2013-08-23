@@ -73,7 +73,26 @@ for curr_matrix in matrix_list:
     assert len(first_data_str) == len(second_data_str)
     assert len(first_data_str) == len(third_data_str)
     assert len(first_data_str) == len(last_data_str)
-    # Here is where you'll need to add the
-    # code for calculating the 3 counts for the current
-    # matrix in the curr_matrix variable and printing out 
-    # those counts
+    # initialize the counters
+    count_first_with_second = 0
+    count_first_with_third = 0
+    count_first_with_last = 0
+    # loop over each position in the strings, testing for the 
+    #  kind of shared similarity that we want to count.
+    for pos in range(len(first_data_str)):
+        d_first = first_data_str[pos]
+        d_second = second_data_str[pos]
+        d_third = third_data_str[pos]
+        d_last = last_data_str[pos]
+        if d_first == d_second:
+            if (d_first != d_third) and (d_third == d_last):
+                count_first_with_second += 1
+        elif d_first == d_third:
+            if d_second == d_last:
+                count_first_with_third += 1
+        elif d_first == d_last:
+            if d_second == d_third:
+                count_first_with_last += 1
+    # print the line summarizing curr_matrix
+    print count_first_with_second, count_first_with_third, \
+          count_first_with_last
