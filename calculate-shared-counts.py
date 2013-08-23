@@ -73,6 +73,27 @@ for curr_matrix in matrix_list:
     assert len(first_data_str) == len(second_data_str)
     assert len(first_data_str) == len(third_data_str)
     assert len(first_data_str) == len(last_data_str)
+    first_data_list = list(first_data_str)
+    second_data_list = list(second_data_str)
+    third_data_list = list(third_data_str)
+    last_data_list = list(last_data_str)
+    first_second = 0
+    first_third = 0
+    first_last = 0
+    ignore = 0
+    for col in range(len(first_data_list)):
+        if first_data_list[col] == second_data_list[col] == third_data_list[col] == last_data_list[col]:
+            ignore += 1
+        else:
+            if (first_data_list[col] == second_data_list[col]) and (third_data_list[col] == last_data_list[col]):
+                first_second += 1
+            elif (first_data_list[col] == third_data_list[col]) and (second_data_list[col] == last_data_list[col]):
+                first_third += 1
+            elif (first_data_list[col] == last_data_list[col]) and (second_data_list[col] == third_data_list[col]):
+                first_last += 1
+            else:
+                ignore += 1
+    print first_second, first_third, first_last
     # Here is where you'll need to add the
     # code for calculating the 3 counts for the current
     # matrix in the curr_matrix variable and printing out 
