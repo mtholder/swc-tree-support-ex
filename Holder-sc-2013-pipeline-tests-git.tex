@@ -215,6 +215,7 @@ Storing code in files is better for:
 \end{itemize}
 \end{frame}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{The programmer's workflow:}
 \Large
@@ -228,19 +229,119 @@ Storing code in files is better for:
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{The programmer's workflow:}
+\begin{frame}{Some useful tricks}
 
 {\large
 Command-tab to switch between editor and terminal.\\
 Arrow-up-key to recall previous commands. \par
 }
 \vskip 1em
-Opening a GUI file browser in your terminal's working directory
-\vskip 1em
+Opening a GUI file browser in your terminal's working directory:\par
 Mac: {\tt \$ open .}\par
 GitBash on Windows: {\tt \$ explorer .}\par
 Ubuntu: {\tt \$ nautilus .}\par
 
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{Version control}
+\Large
+Except for trivial tasks, programming involves
+\begin{itemize}
+    \item writing code,
+    \item testing whether it works
+    \item repeat
+\end{itemize}
+
+You will have many {\em versions} of your code.
+
+A version control system helps you manage changes to a code-base
+\end{frame}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{{\tt git} -- a distributed version control system}
+``Distributed'' here means every developer has the entire version history. There is no central server.
+
+{\tt git} lets you
+\begin{itemize}
+    \item return to a previous snapshot of your code,
+    \item merge work from several developers,
+    \item easily share your code,
+    \item easily back up your code.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{github $\neq$ {\tt git}}
+\Large
+\url{https://github.com/} is a website that offers a lot of very nice services centered around code stored in {\tt git}. But {\tt git} is a command line tool that was developed years before github.
+
+If you are going to use {\tt git}, you probably want to create a github account to see what the fuss is about.
+\end{frame}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{}
+\Large
+I know a lot of programmers.\par
+
+I do not know {\em any} programmers who
+\begin{itemize}
+    \item know how to use a version control system, and
+    \item prefer to write code without using version control system
+\end{itemize}
+\end{frame}
+
+\begin{frame}{}
+\Large
+
+I do not know {\em any} programmers who:
+\begin{itemize}
+    \item know how to use a {\em distributed} version control system, and
+    \item prefer centralized version control to {\em distributed} version control
+\end{itemize}
+\end{frame}
+
+\begin{frame}{}
+\Large
+{\tt git} is clearly one of the best distributed version control systems.
+\vskip 1em
+If you are going to do more than dabble with programming, you should learn {\tt git}.
+\vskip 1em
+Learning {\tt git} will hurt a bit. It is not an easy tool.
+
+\end{frame}
+
+\begin{frame}{Goals for this {\tt git} Intro}
+\Large
+\begin{itemize}
+    \item become comfortable with the ``core'' git commands
+    \item gain a sense of the other important features.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Core {\tt git} commands}
+\large
+\begin{itemize}
+    \item {\tt git init}  -- create and empty repository
+    \item {\tt git clone}  -- obtain an existing repository
+    \item {\tt git add}  and {\tt git commit} to add content to the repository
+    \item {\tt git checkout} -- copy code out of the repository to your filesystem
+    \item {\tt git status} -- create a report of how {\tt git} sees the world
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{More {\tt git} that I'll show you, but we won't practice (much)}
+\large
+\begin{itemize}
+    \item {\tt git pull} -- grab the latest changes from a repository on another computer. Get other people's changes.
+    \item {\tt git push} -- publish your latest changes to a repository on another computer. Give other people your code.
+    \item {\tt git branch}
+    \item {\tt git merge}
+    \item {\tt git fetch}  
+\end{itemize}
 
 \end{frame}
 
