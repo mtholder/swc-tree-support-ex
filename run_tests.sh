@@ -20,3 +20,4 @@ then
     echo 'Some tests failed (see messages above)'
     exit 1
 fi
+echo "All tests passed."
